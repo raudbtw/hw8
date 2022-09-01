@@ -5,20 +5,20 @@ let carAge;
 let carStatus;
 function correctData() {
   if (userName) {
-    userAge = prompt("Select your age");
-    if (typeof userAge === "number" && userAge != "" && userAge != null) {
+    userAge = +prompt("Select your age");
+    if (typeof userAge === "number") {
       carName = prompt("Select car name");
     } else {
       console.log("Input your age!!!");
       return false;
     }
     if (carName != null && carName != "") {
-      carAge = prompt("Select car age");
+      carAge = +prompt("Select car age");
     } else {
       console.log("Input car age!!!");
       return false;
     }
-    if (typeof carAge === "number" && carAge != "" && carAge != null) {
+    if (typeof carAge === "number") {
       carStatus = prompt("Select car satus");
     } else {
       console.log("Input car satus!!!");
