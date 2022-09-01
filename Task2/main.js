@@ -3,15 +3,10 @@ let userAge;
 let carName;
 let carAge;
 let carStatus;
-function getCorrectData() {
-  if (userName != null && userName != "") {
+function correctData() {
+  if (userName) {
     userAge = prompt("Select your age");
-    if (
-      userAge === +userAge &&
-      isFinite(userAge) &&
-      userAge != "" &&
-      userAge != null
-    ) {
+    if (typeof userAge === "number" && userAge != "" && userAge != null) {
       carName = prompt("Select car name");
     } else {
       console.log("Input your age!!!");
@@ -23,18 +18,13 @@ function getCorrectData() {
       console.log("Input car age!!!");
       return false;
     }
-    if (
-      carAge === +carAge &&
-      isFinite(carAge) &&
-      carAge != "" &&
-      carAge != null
-    ) {
+    if (typeof carAge === "number" && carAge != "" && carAge != null) {
       carStatus = prompt("Select car satus");
     } else {
       console.log("Input car satus!!!");
       return false;
     }
-    if (carStatus != null && carStatus != "") {
+    if (carStatus) {
       console.log("all good");
     }
   } else {
@@ -43,7 +33,7 @@ function getCorrectData() {
   }
 }
 
-getCorrectData();
+correctData();
 
 function Car(carName, carStatus, carAge) {
   this.name = carName;
