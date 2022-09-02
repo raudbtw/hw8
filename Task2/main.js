@@ -6,7 +6,7 @@ let carStatus;
 function correctData() {
   if (userName) {
     userAge = +prompt("Select your age");
-    if (typeof userAge === "number") {
+    if (userAge) {
       carName = prompt("Select car name");
     } else {
       console.log("Input your age!!!");
@@ -18,7 +18,7 @@ function correctData() {
       console.log("Input car age!!!");
       return false;
     }
-    if (typeof carAge === "number") {
+    if (carAge) {
       carStatus = prompt("Select car satus");
     } else {
       console.log("Input car satus!!!");
